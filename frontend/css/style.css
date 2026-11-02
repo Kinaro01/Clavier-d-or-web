@@ -25,17 +25,21 @@ h2 {
     font-size: 15px;
     outline: none;
     width: 250px;
+    box-sizing: border-box;
+    height: 45px;
 }
 
 #btn {
-    background-color: rgba(0, 153, 255, 0.815);
-    color: white;
-    border: 1px solid #606060;
+    background-color: #121212;
+    color: #D4A359;
+    border: 1px solid #D4A359;
     border-radius: 8px;
-    padding: 12px;
+    padding: 0 12px;
     font-size: 15px;
-    outline: none;
     width: 130px;
+    box-sizing: border-box;
+    height: 45px;
+    cursor: pointer;
 }
 
 #btn:hover {
@@ -49,8 +53,13 @@ h2 {
 }
 
 a {
-    color: rgb(0, 140, 255);
+    color: #A0A0A0;
     font-size: 18px;
+    text-decoration: none;
+}
+
+a span {
+    color: #D4A359;
 }
 
 .Connexion-Inscription {
@@ -76,22 +85,26 @@ header {
     font-size: 22px;
 }
 
-#ScoreTotal {
+.ScoreQuestion {
+    color: white;
+    font-size: 22px;
+}
+
+.ScoreAccueil span {
     color: #E6C875;
 }
 
-#ScoreTheme {
+.ScoreQuestion span {
     color: #E6C875;
 }
 
 #btn_deco {
-    background-color: rgba(0, 153, 255, 0.815);
-    color: white;
-    border: 1px solid #606060;
+    background-color: #121212;
+    color: #D4A359;
+    border: 1px solid #D4A359;
     border-radius: 8px;
     padding: 15px;
     font-size: 15px;
-    outline: none;
     width: 130px;
 }
 
@@ -137,10 +150,12 @@ header {
     background-color: #303030;
     border-color: #D4AF70;
     transform: translateY(-4px);
+    cursor: pointer;
 }
 
 #Indice {
     visibility: hidden;
+    color: white;
 }
 
 .reponse-correcte {
