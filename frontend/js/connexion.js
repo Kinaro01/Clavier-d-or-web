@@ -1,4 +1,4 @@
-const boutonConnexion = document.getElementById("btn_connexion");
+const boutonConnexion = document.getElementById("btn");
 
 boutonConnexion.addEventListener("click", async () => {
     const pseudo = document.getElementById("pseudo").value.trim();

@@ -1,4 +1,4 @@
-const boutonInscription = document.getElementById("btn_inscription");
+const boutonInscription = document.getElementById("btn");
 
 boutonInscription.addEventListener("click", async () => {
     const pseudo = document.getElementById("pseudo").value.trim();

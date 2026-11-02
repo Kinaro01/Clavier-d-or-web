@@ -1,3 +1,70 @@
+body {
+    background-color: #121212;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
+h1.TitreConnexion {
+    color: #E6C875;
+}
+
+h2 {
+    color: white;
+    font-size: 37px;
+}
+
+.ChampPseudo {
+    background-color: #303030;
+    color: white;
+    border: 1px solid #606060;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 15px;
+    outline: none;
+    width: 250px;
+}
+
+#btn {
+    background-color: rgba(0, 153, 255, 0.815);
+    color: white;
+    border: 1px solid #606060;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 15px;
+    outline: none;
+    width: 130px;
+}
+
+#btn:hover {
+    transition: 0.2s ease;
+    opacity: 0.5;
+}
+
+#message {
+    color: red;
+    font-size: 20px;
+}
+
+a {
+    color: rgb(0, 140, 255);
+    font-size: 18px;
+}
+
+.Connexion-Inscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    margin: 0;
+    gap: 15px;
+}
+
+
 #Indice {
     visibility: hidden;
 }
