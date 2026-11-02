@@ -3,6 +3,38 @@ const idSauvegarde = sessionStorage.getItem("id_sauvegarde");
 const theme = JSON.parse(sessionStorage.getItem("theme_selectionne"));
 const idTheme = theme.id;
 
+async function afficherScoreTheme() {
+    try {
+        const idSauvegarde = sessionStorage.getItem("id_sauvegarde");
+
+        const theme = JSON.parse(sessionStorage.getItem("theme_selectionne"));
+
+        const idTheme = theme.id;
+
+        if (!idSauvegarde || !idTheme) {
+            console.error("Aucune sauvegarde trouvée.");
+            return;
+        }
+
+        const response = await fetch(`/api/scoretheme?id_sauvegarde=${encodeURIComponent(idSauvegarde)}&id_theme=${encodeURIComponent(idTheme)}`);
+
+        if (!response.ok) {
+            const erreur = await response.text();
+            console.error("Erreur HTTP :", response.status, erreur);
+            return;
+        }
+
+        const data = await response.json();
+
+        document.getElementById("ScoreTheme").textContent = data.score_theme;
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+afficherScoreTheme();
+
 const boutonRecomencer = document.getElementById("btn_recommencer")
 
 boutonRecomencer.addEventListener("click", async () => {
@@ -34,4 +66,5 @@ const boutonMenu = document.getElementById("btn_menu")
 
 boutonMenu.addEventListener("click", () => {
     window.location.href = "/accueil"
-})
+});
+
