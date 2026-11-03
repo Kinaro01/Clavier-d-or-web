@@ -29,7 +29,7 @@ h2 {
     height: 45px;
 }
 
-#btn {
+.button {
     background-color: #121212;
     color: #D4A359;
     border: 1px solid #D4A359;
@@ -42,7 +42,7 @@ h2 {
     cursor: pointer;
 }
 
-#btn:hover {
+.button:hover {
     transition: 0.2s ease;
     opacity: 0.5;
 }
@@ -98,21 +98,6 @@ header {
     color: #E6C875;
 }
 
-#btn_deco {
-    background-color: #121212;
-    color: #D4A359;
-    border: 1px solid #D4A359;
-    border-radius: 8px;
-    padding: 15px;
-    font-size: 15px;
-    width: 130px;
-}
-
-#btn_deco:hover {
-    transition: 0.2s ease;
-    opacity: 0.5;
-}
-
 #ThemeCard {
     display: flex;
     justify-content: center;
@@ -156,6 +141,32 @@ header {
 #Indice {
     visibility: hidden;
     color: white;
+}
+
+ #btn_indice {
+    background-color: #D4A359;
+    color: white;
+    border: 1px solid #121212; 
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 15px;
+    width: 130px;
+    box-sizing: border-box;
+    height: 45px;
+    cursor: pointer;
+ }
+
+ #btn_indice:hover {
+    transition: 0.2s ease;
+    opacity: 0.5;
+ }
+
+ #btn_indice:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #999999;
+    cursor: default;
+    opacity: 0.5;      
 }
 
 .reponse-correcte {

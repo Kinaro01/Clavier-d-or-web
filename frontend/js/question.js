@@ -175,6 +175,7 @@ const texteIndice = document.getElementById("Indice");
 
 boutonIndice.addEventListener("click", () => {
     texteIndice.style.visibility = "visible";
+    boutonIndice.disabled = true
 })
 
 // verification quand on choisit une reponse
@@ -216,6 +217,7 @@ document.getElementById("ReponseD").addEventListener("click", async function() {
 boutonSuivant.addEventListener("click", () => {
     boutonSuivant.style.display = "none";
     texteIndice.style.visibility = "hidden"
+    boutonIndice.disabled = false
 
     ReinitialiserCouleurs();
     AfficherQuestion();
