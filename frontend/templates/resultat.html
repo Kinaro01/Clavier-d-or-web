@@ -10,14 +10,26 @@
 
 <body>
     <header>
-        <h1>Page resultat :</h1>
+        <div class="center">
+        <h1 class="TitreConnexion">Clavier d'or </h1>
+        </div>
     </header>
 
-    <p>Score final du thème : <span id="ScoreTheme"></span></p>
-    <button class="button" id="btn_recommencer">Recommencer</button>
-    <button class="button" id="btn_menu">Retourner au menu</button>
-    <button class="button" id="export_pdf">Exporter en PDF</button>
+    <div class="center">
+        <h2>Fin de partie !</h2>
+    </div>
 
+    <div class="center">
+        <p>Score final du thème : <span id="ScoreTheme"></span></p>
+    </div>
+
+    <div class="center">
+        <div class="btn_resultat">
+            <button class="button" id="btn_recommencer">Recommencer</button>
+            <button class="button" id="btn_menu">Retour au menu</button>
+            <button class="button" id="export_pdf">Exporter en PDF</button>
+            </div>
+    </div>
 
     <script src="/js/resultat.js" defer></script>
     <script src="/js/pdf.js" defer></script>
