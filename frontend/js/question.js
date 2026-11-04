@@ -66,6 +66,7 @@ async function AfficherQuestion() {
         return;
     }
 
+    document.getElementById("TypeQuestion").textContent = data.type ?? "";
     document.getElementById("Libelle").textContent = data.nom ?? "";
     document.getElementById("Indice").textContent = "Indice : "  + data.indice ?? "";
     document.getElementById("ReponseA").textContent = data.reponse_a ?? "";
@@ -174,7 +175,7 @@ const boutonIndice = document.getElementById("btn_indice");
 const texteIndice = document.getElementById("Indice");
 
 boutonIndice.addEventListener("click", () => {
-    texteIndice.style.visibility = "visible";
+    texteIndice.style.display = "block";
     boutonIndice.disabled = true
 })
 
@@ -216,7 +217,7 @@ document.getElementById("ReponseD").addEventListener("click", async function() {
 // Passer a la question suivante
 boutonSuivant.addEventListener("click", () => {
     boutonSuivant.style.display = "none";
-    texteIndice.style.visibility = "hidden"
+    texteIndice.style.display = "none";
     boutonIndice.disabled = false
 
     ReinitialiserCouleurs();

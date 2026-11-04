@@ -16,6 +16,12 @@ h2 {
     font-size: 37px;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .ChampPseudo {
     background-color: #303030;
     color: white;
@@ -139,7 +145,7 @@ header {
 }
 
 #Indice {
-    visibility: hidden;
+    display: none;
     color: white;
 }
 
@@ -167,6 +173,16 @@ header {
     border-color: #999999;
     cursor: default;
     opacity: 0.5;      
+}
+
+.question  {
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+}
+
+#TypeQuestion {
+    color: #D4A359;
 }
 
 .reponse-correcte {
