@@ -10,14 +10,17 @@
 
 <body>
     <header>
-        <h1 class="TitreConnexion">Clavier d'or </h1>
-    </header>
-
-    <div class="ScoreQuestion">
-        <p>Score du thème : <span id="ScoreTheme"></span></p>
+        <div class="centerSpace">
+            <div class="ScoreQuestion">
+                <p>Score thème : <span id="ScoreTheme"></span></p>
+            </div>
+            <h1 class="TitreConnexion">Clavier d'or </h1>
+            <button class="button" id="btn_menu">Retour au menu</button>
         </div>
-        <h1 id="TitreTheme"></h1>
-        <button class="button" id="btn_menu">Retour au menu</button>
+    </header>
+    <div class="center">
+        <h2 id="TitreTheme"></h2>
+    </div>        
 
     <div class="center">
         <div class="CardQuestion">
@@ -33,8 +36,9 @@
         <button class="btn_reponse" id="ReponseD"></button>
     </div>
 
-    <button class="button" id="QuestionSuivante" style="display: none;"> Question suivante</button>
-
+    <div class="center">
+        <button class="button" id="QuestionSuivante" style="display: none;"> Question suivante</button>
+    </div>
     <footer>
         <button id="btn_indice">Indice</button>
     </footer>

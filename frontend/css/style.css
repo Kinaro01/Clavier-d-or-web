@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Upheaval";
-  src: url("./assets/upheaval.ttf") format("truetype");
+  src: url("/assets/upheaval.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -18,12 +18,14 @@ h1 {
 h1.TitreConnexion {
     color: #D4A359;
     font-family: "Upheaval", system-ui, sans-serif;
-    text-align: center;
+    font-weight: lighter;
 }
 
 h2 {
     color: white;
     font-size: 37px;
+    font-family: "Upheaval", system-ui, sans-serif;
+    font-weight: lighter;
 }
 
 .center {
@@ -44,12 +46,18 @@ h2 {
     color: white;
     border: 1px solid #606060;
     border-radius: 8px;
-    padding: 12px 15px;
-    font-size: 15px;
+    height: 60px !important;
+    font-size: 17px;
     outline: none;
     width: 250px;
     box-sizing: border-box;
-    height: 45px;
+    text-align: center;
+}
+
+.ChampTexte {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .button {
@@ -57,12 +65,17 @@ h2 {
     color: #D4A359;
     border: 1px solid #D4A359;
     border-radius: 8px;
-    padding: 1 12px;
-    font-size: 15px;
-    width: 130px;
-    box-sizing: border-box;
-    height: 45px;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    font-size: 17px;
+    width: 150px;
+    height: 60px;
+
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .button:hover {
@@ -98,12 +111,12 @@ a span {
 
 .ScoreAccueil {
     color: white;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 .ScoreQuestion {
     color: white;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 .ScoreAccueil span {
@@ -170,12 +183,13 @@ a span {
     color: white;
     border: 1px solid #121212; 
     border-radius: 8px;
-    padding: 0 12px;
-    font-size: 15px;
-    width: 130px;
+    padding: 0;
+    font-size: 17px;
+    width: 150px;
+    height: 60px;
     box-sizing: border-box;
-    height: 45px;
     cursor: pointer;
+    margin-left: 30px;
  }
 
  #btn_indice:hover {
@@ -215,7 +229,7 @@ a span {
 .reponses {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 30px;
     max-width: 1200px;
     margin: 65px auto;
@@ -225,8 +239,9 @@ a span {
     color: #D4AF70;
     background-color: #252525;
     border: 1.5px solid #454545;
-    white-space: nowrap;
-    width: auto; 
+    white-space: normal;
+    height: auto;
+    width: auto;
     padding: 35px;
     font-size: 25px;
     cursor: pointer;
@@ -236,7 +251,8 @@ a span {
 
 .btn_reponse:hover {
     border-color: #D4AF70;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    transition: 0.2s ease;
     cursor: pointer;
 }
 

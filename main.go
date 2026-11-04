@@ -10,6 +10,7 @@ func main() {
 
     router := gin.Default()
 
+	router.StaticFile("/assets/upheaval.ttf", "./assets/upheaval.ttf")
     router.Static("/css", "./frontend/css")
     router.Static("/js", "./frontend/js")
 
