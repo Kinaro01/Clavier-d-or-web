@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Upheaval";
+  src: url("./assets/upheaval.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 body {
     background-color: #121212;
 }
@@ -8,7 +16,9 @@ h1 {
 }
 
 h1.TitreConnexion {
-    color: #E6C875;
+    color: #D4A359;
+    font-family: "Upheaval", system-ui, sans-serif;
+    text-align: center;
 }
 
 h2 {
@@ -20,6 +30,13 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.centerSpace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
 }
 
 .ChampPseudo {
@@ -40,7 +57,7 @@ h2 {
     color: #D4A359;
     border: 1px solid #D4A359;
     border-radius: 8px;
-    padding: 0 12px;
+    padding: 1 12px;
     font-size: 15px;
     width: 130px;
     box-sizing: border-box;
@@ -79,13 +96,6 @@ a span {
     gap: 15px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-}
-
 .ScoreAccueil {
     color: white;
     font-size: 22px;
@@ -98,10 +108,12 @@ header {
 
 .ScoreAccueil span {
     color: #E6C875;
+    font-weight: bold;  
 }
 
 .ScoreQuestion span {
     color: #E6C875;
+    font-weight: bold;
 }
 
 #ThemeCard {
@@ -118,7 +130,8 @@ header {
 .ThemeName {
     width: 200px;
     min-height: 145px;
-    padding: 20px;
+    padding: 35px;
+    font-size: 25px;
 
     display: flex;
     justify-content: center;
@@ -128,9 +141,8 @@ header {
     color: #D4AF70;
 
     border: 1px solid #454545;
-    border-radius: 12px;
+    border-radius: 30px;
 
-    font-size: 19px;
     font-weight: bold;
     text-align: center;
 
@@ -146,7 +158,11 @@ header {
 
 #Indice {
     display: none;
-    color: white;
+    color: black;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 1.5em;
+    font-style: italic;
 }
 
  #btn_indice {
@@ -176,13 +192,52 @@ header {
 }
 
 .question  {
-    color: white;
+    color: black;
     font-size: 30px;
     justify-content: center;
+    opacity: 1;
+}
+
+.CardQuestion  {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    opacity: 0.8;
+    margin-top: 2em;
 }
 
 #TypeQuestion {
     color: #D4A359;
+}
+
+.reponses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 65px auto;
+}
+
+.btn_reponse {
+    color: #D4AF70;
+    background-color: #252525;
+    border: 1.5px solid #454545;
+    white-space: nowrap;
+    width: auto; 
+    padding: 35px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn_reponse:hover {
+    border-color: #D4AF70;
+    transform: translateY(-2px);
+    cursor: pointer;
 }
 
 .reponse-correcte {

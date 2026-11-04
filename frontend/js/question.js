@@ -188,6 +188,7 @@ document.getElementById("ReponseA").addEventListener("click", async function() {
     await VerifierQuestion("A");
 
     boutonSuivant.style.display = "block";
+    boutonIndice.disabled = true
 });
 
 document.getElementById("ReponseB").addEventListener("click", async function() {
@@ -196,6 +197,7 @@ document.getElementById("ReponseB").addEventListener("click", async function() {
     await VerifierQuestion("B");
 
     boutonSuivant.style.display = "block";
+    boutonIndice.disabled = true
 });
 
 document.getElementById("ReponseC").addEventListener("click", async function() {
@@ -204,6 +206,7 @@ document.getElementById("ReponseC").addEventListener("click", async function() {
     await VerifierQuestion("C");
 
     boutonSuivant.style.display = "block";
+    boutonIndice.disabled = true
 });
 
 document.getElementById("ReponseD").addEventListener("click", async function() {
@@ -212,6 +215,7 @@ document.getElementById("ReponseD").addEventListener("click", async function() {
     await VerifierQuestion("D");
 
     boutonSuivant.style.display = "block";
+    boutonIndice.disabled = true
 });
 
 // Passer a la question suivante

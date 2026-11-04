@@ -10,24 +10,27 @@
 
 <body>
     <header>
-        <div class="ScoreQuestion">
+        <h1 class="TitreConnexion">Clavier d'or </h1>
+    </header>
+
+    <div class="ScoreQuestion">
         <p>Score du thème : <span id="ScoreTheme"></span></p>
         </div>
         <h1 id="TitreTheme"></h1>
         <button class="button" id="btn_menu">Retour au menu</button>
-    </header>
 
     <div class="center">
-    <p class="question"> Question <span id="TypeQuestion"></span> : <span id="Libelle"> </span></p>
+        <div class="CardQuestion">
+            <p class="question"> Question <span id="TypeQuestion"></span> : <span id="Libelle"> </span></p>
+            <p id="Indice"></p>
+        </div>
     </div>
 
-    <p id="Indice"></p>
-
     <div class="reponses">
-        <button id="ReponseA"></button>
-        <button id="ReponseB"></button>
-        <button id="ReponseC"></button>
-        <button id="ReponseD"></button>
+        <button class="btn_reponse" id="ReponseA"></button>
+        <button class="btn_reponse" id="ReponseB"></button>
+        <button class="btn_reponse" id="ReponseC"></button>
+        <button class="btn_reponse" id="ReponseD"></button>
     </div>
 
     <button class="button" id="QuestionSuivante" style="display: none;"> Question suivante</button>
