@@ -112,10 +112,6 @@ p {
     
 }
 
-p span {
-    color: #E6C875;
-}
-
 .Connexion-Inscription {
     display: flex;
     flex-direction: column;
