@@ -126,7 +126,7 @@ async function VerifierQuestion(choixReponse) {
             .classList.add("reponse-incorrecte");
     }
 
-    } catch {
+    } catch (error) {
         console.error(error);
     }
 }
