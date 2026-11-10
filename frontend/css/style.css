@@ -302,3 +302,350 @@ p {
     padding: 8px;
     cursor: pointer;
 }
+
+
+/*---------RESPONSIVE-------------*/
+
+/* Tablettes */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h1.TitreConnexion {
+        margin-right: 0;
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .centerSpace {
+        display: grid;
+        /* largeur des colones de la grille */
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 24px;
+    }
+
+    /* séléction de l'élément a droite étant l'enfant direct de l'élément a gauche */
+    .centerSpace > .ScoreAccueil,
+    .centerSpace > .ScoreQuestion {
+        justify-self: start;
+    }
+
+    .centerSpace > h1 {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .centerSpace > .button {
+        justify-self: end;
+    }
+
+    .ScoreAccueil,
+    .ScoreQuestion {
+        font-size: 19px;
+    }
+
+    .ScoreAccueil p,
+    .ScoreQuestion p {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    #ThemeCard {
+        max-width: 850px;
+        gap: 22px;
+        margin: 45px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .ThemeName {
+        width: 180px;
+        min-height: 135px;
+        padding: 25px;
+        font-size: 22px;
+        box-sizing: border-box;
+    }
+
+    .CardQuestion {
+        width: 85%;
+        box-sizing: border-box;
+        padding: 1.5em;
+    }
+
+    .question {
+        font-size: 26px;
+        overflow-wrap: break-word;
+    }
+
+    #Indice {
+        font-size: 20px;
+        overflow-wrap: break-word;
+    }
+
+    .reponses {
+        display: grid;
+        /* 2 colonnes identiques ayant pour min 0 et max une fraction de la page */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 90%;
+        max-width: 850px;
+        min-height: 0;
+        box-sizing: border-box;
+        gap: 18px;
+        margin: 40px auto;
+        padding: 0;
+    }
+
+    .btn_reponse {
+        width: 100%;
+        min-width: 0;
+        padding: 25px 18px;
+        font-size: 21px;
+        overflow-wrap: anywhere;
+    }
+
+    #btn_indice {
+        margin: 0 0 20px 24px;
+    }
+
+    .btn_resultat {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+}
+
+
+/* Mobiles */
+@media screen and (max-width: 767px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    h1.Titre {
+        font-size: 36px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    h1.TitreConnexion {
+        font-size: 34px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 29px;
+        text-align: center;
+        padding: 0 12px;
+    }
+
+    p {
+        font-size: 22px;
+        margin-top: 1em;
+    }
+
+    .centerSpace {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 15px;
+    }
+
+    .centerSpace .ScoreAccueil,
+    .centerSpace .ScoreQuestion {
+        order: 1;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .centerSpace h1 {
+        order: 2;
+        margin: 0;
+    }
+
+    .centerSpace > .button {
+        order: 3;
+    }
+
+    .ScoreAccueil p,
+    .ScoreQuestion p {
+        margin: 0;
+        font-size: 19px;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 250px;
+        min-height: 52px;
+        height: auto;
+        padding: 12px 16px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    .ChampTexte {
+        width: 100%;
+        max-width: 340px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .ChampPseudo {
+        width: 100%;
+        max-width: 300px;
+        height: 54px !important;
+    }
+
+    .Connexion-Inscription {
+        min-height: 100vh;
+        height: auto;
+        padding: 25px 15px;
+        box-sizing: border-box;
+        gap: 12px;
+    }
+
+    .Connexion-Inscription h2 {
+        margin: 10px 0;
+    }
+
+    .Connexion-Inscription p {
+        font-size: 18px;
+        text-align: center;
+        overflow-wrap: anywhere;
+        margin: 8px 0;
+    }
+
+    #message {
+        font-size: 17px;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    a {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #ThemeCard {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        width: 100%;
+        max-width: 420px;
+        margin: 30px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .ThemeName {
+        width: 100%;
+        min-height: 95px;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 21px;
+        border-radius: 22px;
+    }
+
+    .CardQuestion {
+        width: calc(100% - 30px);
+        max-width: 600px;
+        box-sizing: border-box;
+        padding: 20px 16px;
+        margin: 15px auto 0;
+    }
+
+    .question {
+        font-size: 21px;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+    }
+
+    #Indice {
+        font-size: 17px;
+        line-height: 1.4;
+        margin-top: 18px;
+        overflow-wrap: anywhere;
+    }
+
+    .reponses {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: calc(100% - 30px);
+        max-width: 600px;
+        min-height: 0;
+        box-sizing: border-box;
+        margin: 25px auto;
+        padding: 0;
+    }
+
+    .btn_reponse {
+        width: 100%;
+        min-width: 0;
+        min-height: 60px;
+        padding: 18px 15px;
+        box-sizing: border-box;
+        font-size: 19px;
+        border-radius: 20px;
+        overflow-wrap: anywhere;
+    }
+
+    #QuestionSuivante {
+        margin: 0 auto 20px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        padding: 0 15px 20px;
+    }
+
+    #btn_indice {
+        width: 100%;
+        max-width: 250px;
+        height: 52px;
+        margin: 0;
+    }
+
+    .btn_resultat {
+        width: 100%;
+        max-width: 320px;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 20px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .btn_resultat .button {
+        max-width: none;
+    }
+
+    .center > p {
+        text-align: center;
+        padding: 0 15px;
+        overflow-wrap: anywhere;
+    }
+}
