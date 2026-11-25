@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Text, TextInput, Button } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { connexion } from "../services/api";
-import { useRouter } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 
 
 export default function ConnexionScreen() {
@@ -13,17 +13,25 @@ export default function ConnexionScreen() {
 
   const router = useRouter();
 
-  const validerPseudo = () => {
+  const validerPseudo = async () => {
     if (pseudo.trim() === "") {
-      setErreur("Veuillez entrer un pseudo");
-      setMessage("");
+        setErreur("Veuillez entrer un pseudo");
+        return;
     }
-    else {
-      setErreur("");
-      connexion(pseudo);
-      router.push("/accueil");
+
+    try {
+        setErreur("");
+
+        const response = await connexion(pseudo);
+
+        setPseudo("");
+        router.push("/accueil");
+
+    } catch (error) {
+        setErreur("Erreur lors de la connexion");
+        console.error(error);
     }
-  }
+};
 
   return (
     <SafeAreaProvider>
@@ -42,6 +50,10 @@ export default function ConnexionScreen() {
         />
 
         <Text>{erreur}</Text>
+
+        <Link href="/inscription">
+          <Text>Pas de compte ? Inscrivez vous</Text>
+        </Link>
 
 
       </SafeAreaView>

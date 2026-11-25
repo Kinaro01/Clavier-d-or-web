@@ -31,7 +31,7 @@ export async function connexion(pseudo) {
 }
 
 // Inscription
-export async function incription(pseudo) {
+export async function inscription(pseudo) {
     return apiRequest("/api/inscription", {
         method: "POST",
         body: JSON.stringify({
