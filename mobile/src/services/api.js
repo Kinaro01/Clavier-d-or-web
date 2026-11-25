@@ -1,5 +1,5 @@
 // Adresse du backend Go
-const API_URL = "http://localhost:8080";
+const API_URL = "http://10.162.128.1:8080";
 
 // fonction générique qui sert de base pour les autres appels
 async function apiRequest(endpoint, options = {}) {
@@ -94,7 +94,7 @@ export async function recommencerTheme(idSauvegarde, idTheme) {
 
 
 // Export PDF
-export async function afficherQuestion(idParam, idThemeParam) {
+export async function exportPDF(idParam, idThemeParam) {
     return apiRequest(
         `/api/exportpdf?id_sauvegarde=${encodeURIComponent(idParam)}&id_theme=${encodeURIComponent(idThemeParam)}`
     );

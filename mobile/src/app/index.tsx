@@ -13,14 +13,15 @@ export default function ConnexionScreen() {
 
   const router = useRouter();
 
-  const Valider = () => {
+  const validerPseudo = () => {
     if (pseudo.trim() === "") {
       setErreur("Veuillez entrer un pseudo");
-      setMessage("")
+      setMessage("");
     }
     else {
-      setMessage("Bonjour " + pseudo)
-      setErreur("")
+      setErreur("");
+      connexion(pseudo);
+      router.push("/accueil");
     }
   }
 
@@ -28,8 +29,6 @@ export default function ConnexionScreen() {
     <SafeAreaProvider>
       <SafeAreaView>
         <Text> Bienvenue dans le clavier d'or ! (mobile)</Text>
-
-        <Text> Connexion</Text>
 
         <TextInput
           placeholder="Entrez votre pseudo"
@@ -39,10 +38,9 @@ export default function ConnexionScreen() {
 
         <Button
           title="Se connecter"
-          onPress={() => router.push("/accueil")}
+          onPress={validerPseudo}
         />
 
-        <Text>{message}</Text>
         <Text>{erreur}</Text>
 
 
