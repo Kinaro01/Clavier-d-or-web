@@ -30,7 +30,17 @@ func AfficherQuestion(c *gin.Context) {
 
     question := services.Rechercher_question(idSauvegarde, idTheme)
 
-    c.JSON(200, question)
+    c.JSON(200, gin.H{
+        "id": question.Id,
+	    "theme_id": question.Theme_id,
+	    "type": question.Type,
+	    "nom": question.Nom,
+	    "reponse_a": question.Reponse_a,
+	    "reponse_b": question.Reponse_b,
+	    "reponse_c": question.Reponse_c,
+	    "reponse_d": question.Reponse_d,
+        "indice": question.Indice,
+    })
 }
 
 func VerifierQuestion(c *gin.Context) {
