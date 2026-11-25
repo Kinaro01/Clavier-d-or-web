@@ -30,6 +30,7 @@ func AfficherQuestion(c *gin.Context) {
 
     question := services.Rechercher_question(idSauvegarde, idTheme)
 
+    // a modifier car j envoie l entièreté de la structure
     c.JSON(200, question)
 }
 
